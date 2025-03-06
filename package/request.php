@@ -8,7 +8,7 @@ use PhonePe\payments\v1\PhonePePaymentClient;
 
 if($_SERVER['REQUEST_METHOD']=='POST'){ 
     try {
-        $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, Env::UAT,true);
+        $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, ENV,true);
         $order_id = $_POST['order_id'];
         $order_amount = $_POST['order_amount'] * 100; // Convert to paisa
         $request = PgPayRequestBuilder::builder()

@@ -46,7 +46,7 @@ try {
 
     // PhonePe Payment Client initialization
     try {
-        $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, Env::UAT, true);
+        $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, ENV, true);
     } catch (Exception $e) {
         throw new Exception('Failed to initialize PhonePePaymentClient: ' . $e->getMessage());
     }

@@ -10,7 +10,7 @@ try
         echo "No Transaction Id Found in URL";
         exit;
     }
-    $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, Env::UAT,true);
+    $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, ENV,true);
     $order_id = $_GET['order_id'];
     $checkStatus = $phonePePaymentsClient->statusCheck($order_id);
     

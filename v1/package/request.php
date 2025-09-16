@@ -24,8 +24,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $PagPageUrl = $response->getInstrumentResponse()->getRedirectInfo()->getUrl();
         echo "<script>location.href='".$PagPageUrl."';</script>";
         exit;   
-    }catch (Exception $e) {
-        echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }catch (Throwable  $e) {
+        echo $e;
         exit;
     }
 }else{

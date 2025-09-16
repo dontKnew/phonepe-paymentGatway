@@ -13,6 +13,10 @@ try
     $phonePePaymentsClient = new PhonePePaymentClient(API_MERCHAT_ID, API_KEY, API_KEY_INDEX, ENV,true);
     $order_id = $_GET['order_id'];
     $checkStatus = $phonePePaymentsClient->statusCheck($order_id);
+    // echo "<pre>";
+    // print_r($checkStatus);
+    // echo "</pre>";
+    // exit;
     
     // echo "Response Code : ". $checkStatus->getResponseCode()  . "<br>";
     // echo "Status : ". $checkStatus->getState() . "<br>";
@@ -57,7 +61,7 @@ body {
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4 text-success"><u>Order Payment Details</u></h3>
                         <?php if($checkStatus->getState()!=='COMPLETED'): ?>
-                            <span class='my-2 text-light bg-danger d-flex justify-content-center'> Payment Incomplete, <a href="<?= APP_URL."/package/" ?>" class='text-warning fw-bold mx-2'> click here </a>  to the proceed again payment.. </span>
+                            <span class='my-2 text-light bg-danger d-flex justify-content-center'> Payment Incomplete, <a href="<?= APP_URL."/" ?>" class='text-warning fw-bold mx-2'> click here </a>  to the proceed again payment.. </span>
                         <?php endif; ?>
                         <div class='row'>
                             <div class="mb-3 col-md-6">
@@ -77,7 +81,7 @@ body {
 
                             <div class="mb-3 col-md-6">
                                 <label for="order_amount" class="form-label">Order Amount <span class='text-danger'>*</span></label>
-                                <input type="text" class="form-control" value="<?= $checkStatus->getAmount() . "/- INR"?>" readonly>
+                                <input type="text" class="form-control" value="<?= ($checkStatus->getAmount()/100) . " INR"?>" readonly>
                             </div>
                             
                         </div>

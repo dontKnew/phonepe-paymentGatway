@@ -2,7 +2,7 @@
 
 ## For V1
 ### Video link
-<a href='https://youtu.be/PUTAwWWLqQU' target='_blank'>Click here to watch video</a>  
+<a href='https://www.youtube.com/watch?v=N0VlgOPZwnE' target='_blank'>Click here to watch video</a>  
 #### For more information visit this GitHub repo (well written):  
 <a href='https://github.com/itsofficialsandeep/phonePePG' target='_blank'>Click here to visit</a>
 

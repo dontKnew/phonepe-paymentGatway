@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-const APP_URL = "https://nutrimitha.phpmasterr.com/phonepe/package";
+const APP_URL = "http://localhost:1111/package";
 
 // After payment success or failure redirect to this URL
 const RESPONSE_PATH = APP_URL."/response.php";
